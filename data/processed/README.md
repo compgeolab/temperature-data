@@ -1,11 +1,19 @@
 # Monthly average temperature data for the world
 
-This archive contains monthly average temperature records for several countries
-(see list below). The data for each country is contained in a CSV file. The
-temperature is the country-wide average for each month of the year.
-
-The data are a subset of the original data files from 
+These data are a subset of the original data files from 
 [Berkeley Earth](https://www.berkeleyearth.org) licensed CC-BY-NC.
+
+This archive contains monthly average temperature records for several countries
+(see list below). The data for each country is contained in a CSV file with the
+year, month, decimal year, temperature (C), and uncertainty (C). The temperature 
+is the country-wide average for each month of the year. The decimal year assumes 
+every month is 1/12 of a year and assigns the datum to the middle of the month.
+
+The original data were processed to remove NaNs, include the decimal year, 
+convert temperature anomaly to absolute temperature, and format the data as CVS
+with UTF-8 encoding.
+
+Downloaded and processed: 2025-02-11
 
 ## License
 
