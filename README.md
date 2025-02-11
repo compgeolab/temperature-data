@@ -1,18 +1,27 @@
-# Global country-average temperature data
+# Global monthly average temperature data
 
-Download and create a subset of global country-average temperature data from
-[Berkeley Earth](http://berkeleyearth.lbl.gov). This can be used as sample data
-for introduction to programming classes.
+Download and create a subset of global monthly average temperature data for
+different countries from [Berkeley Earth](https://berkeleyearth.org). This can
+be used as sample data for introduction to programming and data science
+classes.
 
-The selected data cover the same time period with no gaps (NaNs). This will
-help make them more accessible to learners. The year and month have been
-converted to a decimal year to that they can be easily plotted.
+## Download the data
 
-A total of 10 countries were chosen to make it a relatively even spread across
-the globe and have both large continental areas as well as island nations.
+Get the latest version of the dataset as a zip file from:
+https://github.com/compgeolab/temperature-data/releases/latest
 
-![](code/temperature-countries.png)
+The zip file contains CSVs with the monthly average temperature in degrees
+Celsius, one for each country. See the [README.md](data/processed/README.md)
+for more information.
 
 ## License
 
-The source code is distributed under the [MIT license](LICENSE.txt).
+The processed temperature data are made available under the
+[Creative Commons Attribution-NonCommercial 4.0 International license](https://creativecommons.org/licenses/by-nc/4.0/)
+(CC-BY-NC).
+Please credit the original authors of the data (Berkeley Earth) as well as
+Leonardo Uieda when using this work.
+Please include links to https://www.berkeleyearth.org and
+https://github.com/compgeolab/temperature-data.
+
+The Python source code is licensed under the MIT license.

@@ -1,9 +1,9 @@
-name: global-temperature-data
+name: temperature-data
 channels:
   - conda-forge
   - defaults
 dependencies:
-  - python==3.8
+  - python==3.13
   - pip
   - pooch
   - numpy
@@ -11,4 +11,3 @@ dependencies:
   - beautifulsoup4
   - tqdm
   - jupyterlab
-  - jupyter
