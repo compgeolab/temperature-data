@@ -8,7 +8,7 @@ classes.
 ## Download the data
 
 Get the latest version of the dataset as a zip file from:
-https://github.com/compgeolab/temperature-data/releases/latest
+https://github.com/compgeolab/temperature-data/releases/latest/download/temperature-data.zip
 
 The zip file contains CSVs with the monthly average temperature in degrees
 Celsius, one for each country. See the [README.md](data/processed/README.md)
