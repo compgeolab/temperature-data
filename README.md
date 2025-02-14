@@ -7,12 +7,36 @@ classes.
 
 ## Download the data
 
-Get the latest version of the dataset as a zip file from:
-https://github.com/compgeolab/temperature-data/releases/latest/download/temperature-data.zip
+Get the latest version of the dataset as a zip file:
+
+
+| File | MD5 checksum |
+|:-----|:----|
+| [`temperature-data.zip`](https://github.com/compgeolab/temperature-data/releases/download/2025-02-11/temperature-data.zip) | `d102212049af1695b686c94ae1eea233` |
 
 The zip file contains CSVs with the monthly average temperature in degrees
 Celsius, one for each country. See the [README.md](data/processed/README.md)
 for more information.
+
+You can download and unpack this arquive in Python using the [Pooch](https://www.fatiando.org/pooch) library:
+
+```python
+import pooch
+
+# Copy the URL and MD5 from above.
+paths_to_each_file = pooch.retrieve(
+    url="https://github.com/compgeolab/temperature-data/releases/download/2025-02-11/temperature-data.zip",
+    known_hash="md5:d102212049af1695b686c94ae1eea233",
+    processor=pooch.Unzip(),
+)
+
+# paths_to_each_file is a list with the path to each file in the archive
+# The paths can be passed to pandas directly.
+import pandas as pd
+
+# Grab the second one because the README.md will be the first.
+data = pandas.read_csv(sorted(paths_to_each_file)[1], comment="#")
+```
 
 ## License
 
